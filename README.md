@@ -42,9 +42,16 @@ Site deployed on Netlify [here](https://axios-http.com/)
 
 I would like to thank the internet.
 
-### Name of feature:
+### Build Form and Display
+
+Estimate of time needed to complete: 1 hour
+Start time: 10:00pm
+Finish time:
+Actual time needed to complete:
+
+<!-- ### Name of feature:
 
 Estimate of time needed to complete:
 Start time:
 Finish time:
-Actual time needed to complete:
+Actual time needed to complete: -->
