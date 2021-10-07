@@ -49,6 +49,13 @@ Start time: 10:00pm
 Finish time: 11:00pm
 Actual time needed to complete: 1 hour
 
+### Display Map
+
+Estimate of time needed to complete: 1 hour
+Start time: 6:45pm
+Finish time:
+Actual time needed to complete:
+
 <!-- ### Name of feature:
 
 Estimate of time needed to complete:
