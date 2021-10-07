@@ -3,8 +3,6 @@
 **Author**: Ian Cargill\
 **Version**: 1.0.0
 
-<!-- (increment the patch/fix version number if you make more commits past your first submission) -->
-
 ## Overview
 
 A site for city exploration. Enter a city to see what it has to offer.
@@ -19,24 +17,21 @@ Built with create React App.
 - npm build\
   Bundled for deployment
 
-<!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
-
 ## Architecture
+
+Site deployed on Netlify [here](https://axios-http.com/)
 
 Built with [Create React App](https://github.com/facebook/create-react-app) and [React-Bootstrap](https://react-bootstrap.github.io/).
 API requests are handled with the [axios](https://axios-http.com/s) library.
 
-Site deployed on Netlify [here](https://axios-http.com/)
-
-<!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
+<img src="Diagram.png"
+     alt="App Diagram"
+     style="margin-right: 10px;" />
 
 ## Change Log
 
+10-6-2021 10:30pm Error Handling uploaded
 10-5-2021 9:30pm inital setup.
-
-<!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an example:
-
-01-01-2001 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource. -->
 
 ## Credit and Collaborations
 
@@ -53,12 +48,13 @@ Actual time needed to complete: 1 hour
 
 Estimate of time needed to complete: 1 hour
 Start time: 6:45pm
-Finish time:
-Actual time needed to complete:
+Finish time:8:45pm
+Actual time needed to complete: 2hrs
+(map/image/documenation)
 
-<!-- ### Name of feature:
+### Error Message
 
-Estimate of time needed to complete:
-Start time:
-Finish time:
-Actual time needed to complete: -->
+Estimate of time needed to complete: 1 hour
+Start time: 9:40pm
+Finish time: 10:10pm m
+Actual time needed to complete: 30 min
