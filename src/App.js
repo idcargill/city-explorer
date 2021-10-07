@@ -33,19 +33,6 @@ class App extends React.Component {
     this.setState({ apiData: apiData.data[0] });
   };
 
-  // UpdateMap = async () => {
-  //   const URL = "https://maps.locationiq.com/v3/staticmap";
-  //   const KEY = process.env.REACT_APP_LOCATION_API_KEY;
-  //   const zoom = 10;
-  //   const lat = this.state.apiData.lat;
-  //   const lon = this.state.apiData.lon;
-
-  //   const fullURL = `${URL}?key=${KEY}&center=${lat},${lon}&zoom=${zoom}`;
-  //   const mapData = await axios.get(fullURL);
-  //   console.log(mapData);
-  //   this.setState({ mapData: mapData });
-  // };
-
   render() {
     console.log("app state", this.state);
     return (
@@ -56,7 +43,6 @@ class App extends React.Component {
           HandleExplore={this.HandleExplore}
           apiData={this.state.apiData}
         />
-
         <MapDisplay apiData={this.state.apiData} />
       </div>
     );

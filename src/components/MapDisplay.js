@@ -7,7 +7,7 @@ class MapDisplay extends React.Component {
 
     const URL = "https://maps.locationiq.com/v3/staticmap";
     const KEY = process.env.REACT_APP_LOCATION_API_KEY;
-    const zoom = 10;
+    const zoom = 15;
     const lat = this.props.apiData.lat;
     const lon = this.props.apiData.lon;
 
@@ -17,12 +17,7 @@ class MapDisplay extends React.Component {
       <>
         <Container>
           {this.props.apiData.lat && (
-            <img
-              alt='map loading'
-              width='300px'
-              height='400px'
-              src={fullURL}
-            ></img>
+            <img className='map-image' alt='map loading' src={fullURL}></img>
           )}
         </Container>
       </>

@@ -6,8 +6,8 @@ class InputBox extends React.Component {
   render() {
     return (
       <>
-        <Container className='bg-success mp-5 text-white'>
-          <h1>City Search</h1>
+        <Container className='bg-success mp-5 text-white search-box'>
+          <h1>City Explorer</h1>
           <input
             type='text'
             placeholder='Enter a city name...'
@@ -23,7 +23,7 @@ class InputBox extends React.Component {
           </Button>
           {this.props.apiData["display_name"] && (
             <>
-              <Container className='mb-2 bg-dark text-white'>
+              <Container className='mb-2 text-display'>
                 <h3>{this.props.apiData["display_name"]}</h3>
                 <h4>Lat: {this.props.apiData.lat}</h4>
                 <h4>Lat: {this.props.apiData.lon}</h4>
