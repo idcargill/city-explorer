@@ -1,6 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+import ErrorAlert from "./components/ErrorAlert";
 import InputBox from "./components/InputBox";
 import MapDisplay from "./components/MapDisplay";
 import axios from "axios";
@@ -11,6 +12,7 @@ class App extends React.Component {
     this.state = {
       city: "",
       apiData: {},
+      error: "",
     };
   }
 
@@ -27,23 +29,32 @@ class App extends React.Component {
     const KEY = process.env.REACT_APP_LOCATION_API_KEY;
     const FORMAT = "json";
     const fullSearchURL = `${URL}?key=${KEY}&q=${this.state.city}&format=${FORMAT}`;
-    // console.log(fullSearchURL);
-    const apiData = await axios.get(fullSearchURL);
-    console.log(apiData);
-    this.setState({ apiData: apiData.data[0] });
+    try {
+      const apiData = await axios.get(fullSearchURL);
+      if (apiData.status !== 200) {
+        throw new Error(apiData);
+      }
+      console.log("api data: ", apiData);
+      this.setState({ apiData: apiData.data[0] });
+      this.setState({ error: "" });
+    } catch (e) {
+      console.log(e.message);
+      this.setState({ error: e });
+    }
   };
 
   render() {
     console.log("app state", this.state);
     return (
       <div className='container text-center p-4 m-4'>
+        {this.state.error && <ErrorAlert error={this.state.error} />}
         <InputBox
           updateApiData={this.updateApiData}
           updateCity={this.updateCity}
           HandleExplore={this.HandleExplore}
           apiData={this.state.apiData}
         />
-        <MapDisplay apiData={this.state.apiData} />
+        {this.state.apiData.lat && <MapDisplay apiData={this.state.apiData} />}
       </div>
     );
   }
