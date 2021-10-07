@@ -42,10 +42,17 @@ Site deployed on Netlify [here](https://axios-http.com/)
 
 I would like to thank the internet.
 
-### Build Form and Display
+### Build Form and Display API Data
 
 Estimate of time needed to complete: 1 hour
 Start time: 10:00pm
+Finish time: 11:00pm
+Actual time needed to complete: 1 hour
+
+### Display Map
+
+Estimate of time needed to complete: 1 hour
+Start time: 6:45pm
 Finish time:
 Actual time needed to complete:
 
