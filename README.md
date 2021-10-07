@@ -19,10 +19,10 @@ Built with create React App.
 
 ## Architecture
 
-Site deployed on Netlify [here](https://axios-http.com/)
+Site deployed on Netlify [here](https://explore-this.netlify.app/)
 
-Built with [Create React App](https://github.com/facebook/create-react-app) and [React-Bootstrap](https://react-bootstrap.github.io/).
-API requests are handled with the [axios](https://axios-http.com/s) library.
+Built with [Create React App](https://create-react-app.dev/) and [React-Bootstrap](https://react-bootstrap.github.io/).
+API requests are handled with the [axios](https://axios-http.com/) library.
 
 <img src="Diagram.png"
      alt="App Diagram"
@@ -30,31 +30,33 @@ API requests are handled with the [axios](https://axios-http.com/s) library.
 
 ## Change Log
 
-10-6-2021 10:30pm Error Handling uploaded
+10-6-2021 10:30pm Error Handling uploaded\
 10-5-2021 9:30pm inital setup.
 
 ## Credit and Collaborations
 
 I would like to thank the internet.
 
+## Added Features
+
 ### Build Form and Display API Data
 
-Estimate of time needed to complete: 1 hour
-Start time: 10:00pm
-Finish time: 11:00pm
+Estimate of time needed to complete: 1 hour\
+Start time: 10:00pm\
+Finish time: 11:00pm\
 Actual time needed to complete: 1 hour
 
 ### Display Map
 
-Estimate of time needed to complete: 1 hour
-Start time: 6:45pm
-Finish time:8:45pm
-Actual time needed to complete: 2hrs
+Estimate of time needed to complete: 1 hour\
+Start time: 6:45pm\
+Finish time:8:45pm\
+Actual time needed to complete: 2hrs\
 (map/image/documenation)
 
 ### Error Message
 
-Estimate of time needed to complete: 1 hour
-Start time: 9:40pm
-Finish time: 10:10pm m
+Estimate of time needed to complete: 1 hour\
+Start time: 9:40pm\
+Finish time: 10:10pm\
 Actual time needed to complete: 30 min
