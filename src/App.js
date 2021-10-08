@@ -5,6 +5,7 @@ import ErrorAlert from "./components/ErrorAlert";
 import InputBox from "./components/InputBox";
 import MapDisplay from "./components/MapDisplay";
 import axios from "axios";
+import Container from "react-bootstrap/Container";
 
 class App extends React.Component {
   constructor(props) {
@@ -46,7 +47,7 @@ class App extends React.Component {
   render() {
     console.log("app state", this.state);
     return (
-      <div className='container text-center p-4 m-4'>
+      <Container className='text-center main-container'>
         {this.state.error && <ErrorAlert error={this.state.error} />}
         <InputBox
           updateApiData={this.updateApiData}
@@ -55,7 +56,7 @@ class App extends React.Component {
           apiData={this.state.apiData}
         />
         {this.state.apiData.lat && <MapDisplay apiData={this.state.apiData} />}
-      </div>
+      </Container>
     );
   }
 }
