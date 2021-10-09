@@ -3,8 +3,6 @@ import Container from "react-bootstrap/Container";
 
 class MapDisplay extends React.Component {
   render() {
-    console.log("Map props:", this.props);
-
     const URL = "https://maps.locationiq.com/v3/staticmap";
     const KEY = process.env.REACT_APP_LOCATION_API_KEY;
     const zoom = 15;
@@ -16,9 +14,7 @@ class MapDisplay extends React.Component {
     return (
       <>
         <Container>
-          {this.props.apiData.lat && (
-            <img className='map-image' alt='map loading' src={fullURL}></img>
-          )}
+          {this.props.apiData.lat && <img className='map-image' alt='map loading' src={fullURL}></img>}
         </Container>
       </>
     );

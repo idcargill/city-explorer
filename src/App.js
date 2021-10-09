@@ -6,6 +6,8 @@ import InputBox from "./components/InputBox";
 import MapDisplay from "./components/MapDisplay";
 import axios from "axios";
 import Container from "react-bootstrap/Container";
+import getWeatherData from "./helpers/getWeatherData";
+import Weather from "./components/Weather";
 
 class App extends React.Component {
   constructor(props) {
@@ -13,6 +15,7 @@ class App extends React.Component {
     this.state = {
       city: "",
       apiData: {},
+      weatherData: {},
       error: "",
     };
   }
@@ -32,14 +35,14 @@ class App extends React.Component {
     const fullSearchURL = `${URL}?key=${KEY}&q=${this.state.city}&format=${FORMAT}`;
     try {
       const apiData = await axios.get(fullSearchURL);
-      if (apiData.status !== 200) {
-        throw new Error(apiData);
-      }
-      console.log("api data: ", apiData);
-      this.setState({ apiData: apiData.data[0] });
+      const weatherData = await getWeatherData(apiData, this.state.city);
+      this.setState({
+        apiData: apiData.data[0],
+        weatherData: weatherData.data,
+      });
       this.setState({ error: "" });
     } catch (e) {
-      console.log(e.message);
+      console.error(e.message);
       this.setState({ error: e });
     }
   };
@@ -55,6 +58,7 @@ class App extends React.Component {
           HandleExplore={this.HandleExplore}
           apiData={this.state.apiData}
         />
+        {this.state.weatherData[0] && <Weather weatherData={this.state.weatherData} />}
         {this.state.apiData.lat && <MapDisplay apiData={this.state.apiData} />}
       </Container>
     );
