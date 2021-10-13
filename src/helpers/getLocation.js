@@ -1,0 +1,1 @@
+const getLocation = (query) => {};

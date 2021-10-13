@@ -8,6 +8,7 @@ import axios from "axios";
 import Container from "react-bootstrap/Container";
 import getWeatherData from "./helpers/getWeatherData";
 import Weather from "./components/Weather";
+import getMovieData from "./helpers/getMovieData";
 
 class App extends React.Component {
   constructor(props) {
@@ -16,6 +17,7 @@ class App extends React.Component {
       city: "",
       apiData: {},
       weatherData: {},
+      movies: [],
       error: "",
     };
   }
@@ -36,9 +38,12 @@ class App extends React.Component {
     try {
       const apiData = await axios.get(fullSearchURL);
       const weatherData = await getWeatherData(apiData, this.state.city);
+      const movieData = await getMovieData(apiData, this.state.city);
+
       this.setState({
         apiData: apiData.data[0],
         weatherData: weatherData.data,
+        movieData: movieData,
       });
       this.setState({ error: "" });
     } catch (e) {
