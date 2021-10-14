@@ -63,8 +63,29 @@ body {
 }
 
 .map-image {
-  max-width: 80%;
+  max-width: 100%;
   border-radius: 5px;
   border: 5px solid rgba(113, 113, 211, 0.4);
   margin-top: 10px;
+}
+
+.map-image:hover {
+  transform: scale(1.8);
+}
+
+.movies {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.movies img {
+  border-radius: 5px;
+}
+
+.Card {
+  background-color: azure;
+}
+
+.movies:hover > div > img:hover {
+  transform: scale(1.3);
 }
