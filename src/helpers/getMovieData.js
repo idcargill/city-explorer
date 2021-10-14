@@ -6,9 +6,9 @@ const getMovieData = async (apiData, city) => {
   const URL = process.env.REACT_APP_SERVER;
   const lat = +apiData.data[0].lat;
   const lon = +apiData.data[0].lon;
-  const movieApi = `${URL}?lat=${lat}&lon=${lon}&searchQuery=${city}`;
+  const movieApi = `${URL}/movie?lat=${lat}&lon=${lon}&searchQuery=${city}`;
   const movieData = await axios.get(movieApi);
-  return movieData;
+  return movieData.data;
 };
 
 export default getMovieData;
