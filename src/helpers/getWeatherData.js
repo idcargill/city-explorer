@@ -6,9 +6,9 @@ const getWeatherData = async (apiData, city) => {
   const URL = process.env.REACT_APP_SERVER;
   const lat = +apiData.data[0].lat;
   const lon = +apiData.data[0].lon;
-  const fullUrl = `${URL}?lat=${lat}&lon=${lon}&searchQuery=${city}`;
+  const fullUrl = `${URL}/weather?lat=${lat}&lon=${lon}&searchQuery=${city}`;
   const weatherData = await axios.get(fullUrl);
-  return weatherData;
+  return weatherData.data;
 };
 
 export default getWeatherData;

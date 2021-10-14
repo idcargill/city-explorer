@@ -41,8 +41,8 @@ class App extends React.Component {
 
       this.setState({
         apiData: apiData.data[0],
-        weatherData: weatherData.data,
-        movies: movieData.data,
+        weatherData: weatherData,
+        movies: movieData,
       });
       this.setState({ error: "" });
     } catch (e) {
@@ -73,7 +73,7 @@ class App extends React.Component {
             </Col>
             <Col className='col-5'>{this.state.apiData.lat && <MapDisplay apiData={this.state.apiData} />}</Col>
             <Col className='col-2' flex>
-              {this.state.weatherData.length > 0 && <Weather weatherData={this.state.weatherData} />}
+              {this.state.weatherData.length > 1 && <Weather weatherData={this.state.weatherData} />}
             </Col>
           </Row>
         </Container>
