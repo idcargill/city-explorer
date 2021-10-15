@@ -1,38 +1,91 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+:root {
+  --containerBg: rgb(226, 224, 224);
+  --background: #838994;
+  --lightGreen: gb(155, 236, 155);
 }
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body {
+  background-color: var(--background);
+  text-align: center;
+}
+
+.container {
+  text-align: center;
+  background-color: var(--containerBg);
+  border-radius: 5px;
+  max-width: 100%;
+}
+
+.main-container {
+  /* border: 3px solid rgb(155, 236, 155); */
+  max-width: 800px;
+  margin: 30px auto 20px auto;
+  padding: 10px;
+}
+
+.search-box {
+  font-size: 16px;
+  border-radius: 10px;
+  max-width: 80%;
+  padding-bottom: 10px;
+  background-color: var(--lightGreen);
+}
+
+.search-box input {
+  height: 38px;
+  border-radius: 5px;
+  padding: 3px;
+  /* border: 1px solid white; */
+}
+
+.text-display {
+  font-size: 14px;
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px;
+  max-width: 80%;
+  color: rgb(61, 61, 131);
+  background-color: rgb(182, 178, 178);
+}
+
+.text-display p {
+  margin: 0;
+  text-align: left;
+}
+
+.text-display p:first-of-type {
+  margin: 2px 0 10px 0;
+  text-align: left;
+}
+
+.map-image {
+  max-width: 100%;
+  border-radius: 5px;
+  border: 5px solid rgba(113, 113, 211, 0.4);
+  margin-top: 10px;
+}
+
+.map-image:hover {
+  transform: scale(1.8);
+}
+
+.movies {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.movies img {
+  border-radius: 5px;
+}
+
+.Card {
+  background-color: azure;
+}
+
+.movies:hover > div > img:hover {
+  transform: scale(1.3);
 }
