@@ -19,7 +19,7 @@ class App extends React.Component {
     this.state = {
       city: "",
       apiData: {},
-      weatherData: [],
+      weatherData: {},
       movies: [],
       error: "",
     };
@@ -50,8 +50,8 @@ class App extends React.Component {
       this.setState({ error: e });
     }
   };
-
   render() {
+    console.log(this.state);
     return (
       <>
         <Container className='text-center main-container'>
@@ -65,14 +65,14 @@ class App extends React.Component {
         </Container>
         <Container>
           <Row>
-            <Col size='sm' className='col-5' flex>
+            <Col size='sm' className='col-5'>
               <Container className='movies'>
-                {this.state.movies && <MovieDisplay movies={this.state.movies} />}
+                {Object.keys(this.state.movies).length > 1 && <MovieDisplay movies={this.state.movies} />}
               </Container>
             </Col>
             <Col className='col-5'>{this.state.apiData.lat && <MapDisplay apiData={this.state.apiData} />}</Col>
-            <Col className='col-2' flex>
-              {this.state.weatherData.length > 1 && <Weather weatherData={this.state.weatherData} />}
+            <Col className='col-2'>
+              {Object.keys(this.state.weatherData).length > 1 && <Weather weatherData={this.state.weatherData} />}
             </Col>
           </Row>
         </Container>

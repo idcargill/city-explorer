@@ -1,0 +1,3 @@
+# GET http://localhost:3001/weather/?lat=50&lon=-122
+
+GET http://localhost:3001/movie/?searchQuery=Tokyo

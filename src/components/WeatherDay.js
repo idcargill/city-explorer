@@ -5,8 +5,8 @@ class WeatherDay extends React.Component {
   render() {
     return (
       <>
-        <ListGroup.Item className='forecast-box' key={this.props.day.idx} action={true} variant='info'>
-          {this.props.day.date} : {this.props.day.description}
+        <ListGroup.Item className='forecast-box' action={true}>
+          {this.props.day.time} : {this.props.day.forecast}
         </ListGroup.Item>
       </>
     );

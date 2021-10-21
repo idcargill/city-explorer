@@ -30,6 +30,7 @@ API requests are handled with the [axios](https://axios-http.com/) library.
 
 ## Change Log
 
+10-6-2021 10:00pm Weather timestamp / data alignment
 10-6-2021 10:30pm Error Handling uploaded\
 10-5-2021 9:30pm inital setup.
 
@@ -59,4 +60,11 @@ Actual time needed to complete: 2hrs\
 Estimate of time needed to complete: 1 hour\
 Start time: 9:40pm\
 Finish time: 10:10pm\
+Actual time needed to complete: 30 min
+
+### Display Timestamp
+
+Estimate of time needed to complete: 1 hour\
+Start time: 9:00pm\
+Finish time: 9:30pm\
 Actual time needed to complete: 30 min
