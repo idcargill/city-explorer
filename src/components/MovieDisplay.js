@@ -5,7 +5,7 @@ class MovieDisplay extends React.Component {
   render() {
     return (
       <>
-        {this.props.movies.map((movie) => (
+        {this.props.movies.movies.map((movie) => (
           <Movie movie={movie} />
         ))}
       </>
